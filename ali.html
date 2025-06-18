@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ma Tailor</title>
+
+  <!-- SEO & Fonts -->
+  <meta name="description" content="Ma Tailor - Custom clothing and digital marketing solutions for fashion brands. Get tailored shirts, pants, kurtas, and blazers at affordable prices." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+      color: #333;
+      position: relative;
+    }
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    nav a {
+      color: #fbd46d;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #1a1a2e;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      padding: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .gallery-item {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+      height: 280px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .gallery-item p {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+    .buy-btn {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .buy-btn:hover {
+      background-color: #16213e;
+      transform: scale(1.05);
+    }
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .contact-form button {
+      background-color: #1a1a2e;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover {
+      background-color: #16213e;
+    }
+    footer {
+      background-color: #1a1a2e;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      transition: transform 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .highlight-number {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1a1a2e;
+      margin-top: 1rem;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ma Tailor</h1>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Product Gallery -->
+  <div id="products" class="section">
+    <h2>Charges for sewing</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://m.media-amazon.com/images/I/71a-0tfK5PL._SL1500_.jpg" alt="Tailored Shirt">
+        <p><strong>Tailored Shirt</strong><br>₹699</p>
+        <a href="#buy" class="buy-btn">Book Now</a>
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3JSYqmCpOrK8KtcH7HJ3vDEevfRhciAMDng&s" alt="Tailored Pants">
+        <p><strong>Tailored Pants</strong><br>₹899</p>
+        <a href="#buy" class="buy-btn">Book Now</a>
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCiPHNfyhF3kwM-aDORMlmFbop-U5Zn9OAg&s" alt="Traditional Kurta Set">
+        <p><strong>Traditional Kurta Set</strong><br>₹1,499</p>
+        <a href="#buy" class="buy-btn">Book Now</a>
+      </div>
+      <div class="gallery-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0KHYndkYCIEHdahnx61DTXJIguOrNHwz-4A&s" alt="Tailored Blazer">
+        <p><strong>Tailored Blazer</strong><br>₹4,999</p>
+        <a href="#buy" class="buy-btn">Book Now</a>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images-cdn.ubuy.co.in/6364ac53fbfac86144468580-xwq-men-fashion-slim-fit-formal-one.jpg" alt="Formal Coat">
+        <p><strong>Formal Coat</strong><br>₹3,499</p>
+        <a href="#buy" class="buy-btn">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Booking Section with clickable address, button and map -->
+  <div class="section" style="background-color: #fff3cd; border-radius: 12px; margin-top: 2rem;">
+    <h2 style="color:#856404;">Contact for Booking</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 1rem;">Want to book your custom tailoring? We are just a message or call away!</p>
+    <a href="tel:+918820390497" class="buy-btn"><i class="fas fa-phone"></i> Contact Now: 8820390497</a>
+
+    <p style="margin-top: 1rem; font-weight: 500; color: #1a1a2e;">
+      📍 Address:
+      <a href="https://www.google.com/maps?q=22+Rabindra+Sarani+Shop+No+6+Biscuit+Patti+Bazar+Gate+No+8+Kolkata+700073"
+         target="_blank"
+         style="color:#1a1a2e; text-decoration: underline;">
+         22, Rabindra Sarani, Shop No. 6, Biscuit Patti, Bazar Gate No. 8, Kolkata 700073
+      </a>
+    </p>
+
+    <a href="https://www.google.com/maps/dir/?api=1&destination=22+Rabindra+Sarani+Shop+No+6+Biscuit+Patti+Bazar+Gate+No+8+Kolkata+700073"
+       target="_blank"
+       class="buy-btn"
+       style="margin-top: 1rem; display: inline-block;">
+       Get Directions
+    </a>
+
+    <iframe
+      src="https://www.google.com/maps?q=22+Rabindra+Sarani+Shop+No+6+Biscuit+Patti+Bazar+Gate+No+8+Kolkata+700073&output=embed"
+      allowfullscreen>
+    </iframe>
+
+    <p class="highlight-number">or WhatsApp us at: 8820390497</p>
+  </div>
+
+  <!-- Other Sections -->
+  <div id="home" class="section">
+    <h2>Welcome to Ma Tailor</h2>
+    <p>Your one-stop solution for digital marketing and high-quality custom clothing.</p>
+  </div>
+
+  <div id="about" class="section">
+    <h2>About Us</h2>
+    <p>At Ma Tailor, we blend tradition with technology — providing custom-tailored clothing and powerful digital marketing services for fashion brands.</p>
+  </div>
+
+  <div id="services" class="section">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Custom Tailoring for Men</li>
+      <li>Brand Development</li>
+      <li>Social Media Marketing</li>
+      <li>Online Store Setup</li>
+    </ul>
+  </div>
+
+  <div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form class="contact-form" method="POST" action="/submit">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>Phone: <a href="tel:+918820390497">8820390497</a></p>
+    <p>Email: info@matailor.com</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Ma Tailor. All rights reserved.
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918820390497" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>
